@@ -1,9 +1,9 @@
 package kotchess.pieces;
 import kotchess.board;
 
-public abstract class AbstractPiece {
+public abstract class abstractPiece {
 
-    public AbstractPiece(String color, String name){
+    public abstractPiece(String color, String name){
         setColor(color);
         setName(name);
         setValue();
