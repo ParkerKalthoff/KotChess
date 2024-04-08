@@ -1,6 +1,10 @@
 package kotchess;
 import kotchess.pieces.*;
 
+// Generic Factory
+
+// Public CreateBoard and Promote
+
 public class factory {
 
     private String placementString;
@@ -23,6 +27,25 @@ public class factory {
 
     private boolean isCharNumber(char c){
         return c >= '0' && c <= '9';
+    }
+
+    public abstractPiece promote(char symbol){
+
+        String color = (Character.toUpperCase(symbol) == symbol) ? "White" : "Black";
+        char piece = Character.toUpperCase(symbol);
+
+        switch (piece) {
+            case 'B':
+                return new bishop(color);
+            case 'N':
+                return new knight(color);
+            case 'R':
+                return new rook(color);
+            case 'Q':
+                return new queen(color);
+            default:
+                throw new IllegalArgumentException();
+        }
     }
 
     private abstractPiece pieceFactory(char symbol, boolean Q, boolean K, boolean q, boolean k){

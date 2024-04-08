@@ -16,4 +16,6 @@ public class board {
         this.halfmoveClock = halfmoveClock;
         this.fullmoveCount = fullmoveCount;
     }
+
+    
 }
