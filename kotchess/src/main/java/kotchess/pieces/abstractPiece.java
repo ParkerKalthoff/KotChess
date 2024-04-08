@@ -17,18 +17,14 @@ public abstract class abstractPiece {
     private char symbol;
     private boolean pinned;
 
-
-
     abstract int[] moves(board board);
-
-
 
     public String getColor(){
         return this.color;
     }
 
     public void setColor(String color){
-        if(color == "White" || color == "Black"){
+        if(color.equals("White") || color.equals("Black")){
             this.color = color;
         } else {
             throw new IllegalArgumentException();
